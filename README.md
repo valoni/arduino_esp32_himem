@@ -1,26 +1,26 @@
 # arduino_esp32_himem
 
-ESP32 รุ่น WROOM32 เป็น ESP32 รุ่นที่สนับสนุน RAM ภายนอก (PSRAM/ SPI RAM)  
-สำหรับ ArduinoIDE ปกติจะสามารถเข้าถึง ได้เพียง 4MB แรกเท่านั้น  
-แม้ตัว RAM ภายนอกบางรุ่นได้ต่อไว้ถึง 8MB ก็ตาม  
+The ESP32 version WROOM32 is an ESP32 version that supports external RAM (PSRAM / SPI RAM).
+For ArduinoIDE, normally can access only the first 4MB
+Although some external RAM can be connected up to 8MB
 
-การเข้าถึงคำสั่ง 4MB ส่วนบน (ESP32 HIMEM) สำหรับบน Arduino จะยังไม่สามารถเข้าถึงได้  
+Access to the top 4MB command (ESP32 HIMEM) for on the Arduino will not yet be accessible.
 
-เช่น
-คำสั่ง esp_himem_get_phys_size();  
---> คำสั่งสำหรับแสดงขนาด พื้นที่ PSRAM ส่วน HIMEM ที่เกินจาก 4MB แรก  
+such as
+Esp_himem_get_phys_size () command;
+-> command to display the HIMEM PSRAM area in excess of the first 4MB
 
-คำสั่ง esp_himem_get_free_size();  
---> คำสั่งสำหรับแสดงขนาดพื้นที่ส่วน PSRAM ส่วน HIMEM ที่จะสามารถจองพื้นที่ได้  
+Esp_himem_get_free_size () command;
+-> command to display the area of the PSRAM area, the HIMEM area that can be reserved
 
-ฯลฯ 
-บน Arduino จะไม่สามารถเรียกใช้งานได้  
-ตลอดจนคำสั่งจองพื้นที่เม็มในส่วนบนนี้  
+Etc.
+On Arduino, will not be able to run
+As well as the order to reserve the Mem area in the upper section
 
 
-เพื่อการนำ RAM ภายนอกมาใช้งานได้มากขึ้น  
-source code ใน repository นี้  
-จะเป็นตัวเสริมที่ทำให้ Arduino-ESP32 สามารถเข้าถึงคำสั่งจัดการ 4MB ส่วนบน ของ PSRAM ได้ด้วย  
+For more external RAM usage
+source code in this repository
+Will be a supplement that makes Arduino-ESP32 Can access the top 4MB management command of PSRAM too
 
 __Usage__
 
@@ -37,3 +37,6 @@ C:\Users\<USER NAME>\AppData\Local\Arduino15\packages\esp32\hardware\esp32\1.0.2
 
 TridentTD  
 25 June 2018  
+
+Translated by Google Translator Valoni
+27 January 2020
